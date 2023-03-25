@@ -5,4 +5,10 @@ module.exports = {
   resolve: {
     fallback: { util: require.resolve('util/') },
   },
+  resolve: {
+    fallback: { os: require.resolve('os-browserify/browser') },
+  },
+  resolve: {
+    fallback: { fs: require.resolve('fs/') },
+  },
 };
