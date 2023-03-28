@@ -11,4 +11,10 @@ module.exports = {
   resolve: {
     fallback: { fs: require.resolve('fs/') },
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.PORT': JSON.stringify(process.env.PORT),
+      // ...
+    }),
+  ],
 };
